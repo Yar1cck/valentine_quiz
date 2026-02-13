@@ -1,61 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %}Love Quiz — Викторины{% endblock %}
+{% block title %}Love Quiz — Сделай свою!{% endblock %}
 
 {% block content %}
 <section class="quiz-wrapper">
     <header class="quiz-header">
-        <h1>Викторины</h1>
-        <p>Выберите режим и отвечайте честно — магия сделает всё остальное ✨</p>
+        <h1>Сделай свою!</h1>
+        <p>Придумайте вопросы и варианты ответов для вашей пары ✨</p>
     </header>
-
-    <div class="quiz-modes">
-        <button class="quiz-tab active" data-tab="movie">
-            Кто вы из фильма
-        </button>
-        <button class="quiz-tab" data-tab="constructor">
-            Конструктор викторин
-        </button>
-    </div>
-
-    <section class="quiz-section active" id="quiz-movie">
-        <form id="movieForm" class="quiz-form">
-            <div class="field">
-                <label for="movieMood">Как вы обычно проводите свидания?</label>
-                <select id="movieMood" name="movieMood">
-                    <option value="cozy">Фильмы дома и плед</option>
-                    <option value="adventure">Путешествия и приключения</option>
-                    <option value="dramatic">Эмоциональные разговоры до утра</option>
-                    <option value="funny">Смех, комедии и шутки</option>
-                </select>
-            </div>
-
-            <div class="field">
-                <label for="movieTempo">Какой темп у ваших отношений?</label>
-                <select id="movieTempo" name="movieTempo">
-                    <option value="slow">Медленный и осознанный</option>
-                    <option value="fast">Всё быстро и ярко</option>
-                    <option value="balanced">Золотая середина</option>
-                </select>
-            </div>
-
-            <div class="field">
-                <label for="movieConflict">Как вы решаете конфликты?</label>
-                <select id="movieConflict" name="movieConflict">
-                    <option value="talk">Спокойно разговариваем</option>
-                    <option value="pause">Берём паузу и пишем сообщения</option>
-                    <option value="storm">Эмоционально, но с примирением</option>
-                </select>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-glow wide">
-                Узнать, кто вы из фильма
-            </button>
-        </form>
-        <div id="movieResult" class="quiz-result hidden"></div>
-    </section>
-
-    <section class="quiz-section" id="quiz-constructor">
+    <section class="quiz-section active" id="quiz-constructor">
         <div class="constructor-wrapper">
             <h2>Создайте свою викторину</h2>
             <p>Придумайте вопросы и варианты ответов для вашей пары</p>
@@ -89,4 +42,3 @@
     </section>
 </section>
 {% endblock %}
-

@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Проверяем, на какой странице мы находимся
-    const isQuizPage = document.getElementById("quiz-movie") !== null;
+    const isQuizPage = document.getElementById("quiz-constructor") !== null;
     const isValentinePage = document.querySelector(".valentine-page-wrapper") !== null;
 
     if (isQuizPage) {
-        setupQuizTabs();
-        setupMovieQuiz();
         setupConstructor();
         loadSavedQuizzes();
     }
