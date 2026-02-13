@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; script-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; connect-src 'self';" />
     <title>{% block title %}Love Quiz{% endblock %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,6 +19,78 @@
         <span class="heart h4">❤</span>
     </div>
 
+    <!-- Модаль регистрации -->
+    <div id="registrationModal" class="registration-modal">
+        <div class="registration-modal-content">
+            <div class="registration-header">
+                <h2>Добавьте ваши имена</h2>
+                <p>Это нужно, чтобы персонализировать викторины для вас двоих 💕</p>
+            </div>
+
+            <form id="registrationForm" class="registration-form">
+                <div class="registration-row">
+                    <div class="registration-field">
+                        <label>
+                            <input type="radio" name="person1Gender" value="male" checked />
+                            <span>Я</span>
+                        </label>
+                    </div>
+                    <div class="registration-field">
+                        <input 
+                            type="text" 
+                            id="person1Name" 
+                            placeholder="Имя" 
+                            maxlength="20"
+                            required 
+                        />
+                    </div>
+                </div>
+
+                <div class="registration-row">
+                    <div class="registration-field">
+                        <label>
+                            <input type="radio" name="person2Gender" value="female" checked />
+                            <span>И ты</span>
+                        </label>
+                    </div>
+                    <div class="registration-field">
+                        <input 
+                            type="text" 
+                            id="person2Name" 
+                            placeholder="Имя" 
+                            maxlength="20"
+                            required 
+                        />
+                    </div>
+                </div>
+
+                <div class="registration-genders">
+                    <div class="gender-selector">
+                        <label class="gender-option">
+                            <input type="radio" name="person1Gender" value="male" /> 👨 Мужчина
+                        </label>
+                        <label class="gender-option">
+                            <input type="radio" name="person1Gender" value="female" /> 👩 Женщина
+                        </label>
+                    </div>
+
+                    <div class="gender-selector">
+                        <label class="gender-option">
+                            <input type="radio" name="person2Gender" value="male" /> 👨 Мужчина
+                        </label>
+                        <label class="gender-option">
+                            <input type="radio" name="person2Gender" value="female" /> 👩 Женщина
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-glow registration-btn">
+                    Начать! 💌
+                </button>
+            </form>
+        </div>
+    </div>
+
     <header class="site-header">
         <div class="logo">
             <span class="logo-heart">❤</span>
@@ -25,9 +98,12 @@
         </div>
         <nav class="nav">
             <a href="{{ url_for('index') }}" class="nav-link">Главная</a>
-            <a href="{{ url_for('quiz') }}" class="nav-link">Сделай свою!</a>
-            <a href="{{ url_for('valentine') }}" class="nav-link">День Валентина</a>
-            <a href="{{ url_for('gallery') }}" class="nav-link">Галерея</a>
+            <a href="{{ url_for('quiz') }}" class="nav-link">Создать</a>
+            <a href="{{ url_for('couple_quiz') }}" class="nav-link">Парные викторины</a>
+            <a href="{{ url_for('valentine') }}" class="nav-link">Общие викторины</a>
+            <button id="profileBtn" class="nav-link" style="background: none; border: none; cursor: pointer;">
+                <span id="profileNames">Профиль</span>
+            </button>
         </nav>
     </header>
 
@@ -36,7 +112,7 @@
     </main>
 
     <footer class="site-footer">
-        <p>Сделано с любовью для Дня святого Валентина 💌</p>
+        <p>Сделано <a href="https://t.me/yarillo_1" target="_blank">с любовью</a> в День святого Валентина 💌</p>
     </footer>
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>

@@ -19,6 +19,14 @@
                     <input id="quizTitle" name="title" type="text" placeholder="Например, Насколько мы знаем друг друга" required />
                 </div>
 
+                <div class="field">
+                    <label for="quizType">Тип викторины</label>
+                    <select id="quizType" name="quizType" required>
+                        <option value="couple">💑 Парная викторина - оба отвечают и результаты сравниваются</option>
+                        <option value="answers">✓ С правильными ответами - один отвечает, система проверяет</option>
+                    </select>
+                </div>
+
                 <div id="questionsContainer" class="questions-container">
                     <!-- Вопросы будут добавляться динамически -->
                 </div>

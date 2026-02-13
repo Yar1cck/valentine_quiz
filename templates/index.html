@@ -5,17 +5,17 @@
 {% block content %}
 <section class="hero">
     <div class="hero-text">
-        <h1 class="hero-title">Конструктор викторин для влюблённых пар</h1>
+        <h1 class="hero-title">Создай свою викторину для своей второй половинки! Викторины для влюблённых пар</h1>
         <p class="hero-subtitle">
             Создавайте свои викторины или используйте готовые. Сначала один партнёр отвечает на вопросы,
             потом второй — и вы узнаёте, насколько вы совпадаете!
         </p>
         <div class="hero-actions">
-            <a href="{{ url_for('quiz') }}" class="btn btn-primary btn-glow">
-                Начать викторину
+            <a href="{{ url_for('couple_quiz') }}" class="btn btn-primary btn-glow">
+                Парная викторина
             </a>
-            <a href="{{ url_for('gallery') }}" class="btn btn-ghost">
-                Открыть вашу галерею
+            <a href="{{ url_for('quiz') }}" class="btn btn-primary">
+                Создать викторину
             </a>
         </div>
         <div class="hero-meta">
@@ -64,10 +64,6 @@
         <div class="feature-card">
             <h3>Готовые викторины</h3>
             <p>Используйте готовые тесты: «Насколько хорошо ты знаешь партнёра», «Совместимость» и «Кто вы из фильма».</p>
-        </div>
-        <div class="feature-card">
-            <h3>Ваша галерея</h3>
-            <p>Загрузите ваши общие фото в папку <code>images</code> и наслаждайтесь красивой лентой воспоминаний.</p>
         </div>
     </div>
 </section>

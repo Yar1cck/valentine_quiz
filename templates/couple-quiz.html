@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block title %}Парная викторина — Тест совместимости{% endblock %}
+
+{% block content %}
+<section class="couple-quiz-wrapper">
+    <header class="couple-quiz-header">
+        <h1>Парная викторина</h1>
+        <p>Тест совместимости для двоих партнёров</p>
+    </header>
+
+    <div id="coupleQuizContainer">
+        <!-- Главное меню выбора викторин -->
+        <div id="coupleQuizMenu" class="couple-quiz-menu">
+            <h2>Выберите викторину для прохождения</h2>
+            
+            <div class="couple-quizzes-grid">
+                <!-- Готовые викторины -->
+                <div class="couple-quiz-option-group">
+                    <h3>Встроенные викторины</h3>
+                    <div class="couple-quizzes-list">
+                        <button class="couple-quiz-card" data-quiz-key="compatibility">
+                            <span class="quiz-icon">✨</span>
+                            <h4>Тест совместимости</h4>
+                            <p>Классический тест для пар: выясните, насколько вы совпадаете</p>
+                            <span class="quiz-questions">15 вопросов</span>
+                        </button>
+                        <button class="couple-quiz-card" data-quiz-key="preferences">
+                            <span class="quiz-icon">🎯</span>
+                            <h4>Предпочтения и мечты</h4>
+                            <p>Узнайте, совпадают ли ваши мечты и жизненные приоритеты</p>
+                            <span class="quiz-questions">12 вопросов</span>
+                        </button>
+                        <button class="couple-quiz-card" data-quiz-key="love-languages">
+                            <span class="quiz-icon">💓</span>
+                            <h4>Языки любви</h4>
+                            <p>Определите, как вы оба предпочитаете выражать и преимущества свои чувства</p>
+                            <span class="quiz-questions">10 вопросов</span>
+                        </button>
+                        <button class="couple-quiz-card" data-quiz-key="adventure">
+                            <span class="quiz-icon">🌍</span>
+                            <h4>Приключения и путешествия</h4>
+                            <p>Тест о том, как вы оба видите совместные путешествия и приключения</p>
+                            <span class="quiz-questions">12 вопросов</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Пользовательские викторины -->
+                <div class="couple-quiz-option-group">
+                    <h3>Ваши викторины</h3>
+                    <div id="customCoupleQuizzesList" class="couple-quizzes-list">
+                        <!-- Список пользовательских викторин -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Экран для первого партнёра -->
+        <div id="partner1Screen" class="partner-screen hidden">
+            <div class="partner-header">
+                <h2>👤 Партнёр 1: <strong id="partner1Name">Человек 1</strong></h2>
+                <p class="partner-instruction">Отвечай честно на вопросы.</p>
+            </div>
+
+            <div id="partner1QuestionContainer" class="question-container">
+                <!-- Вопросы будут добавлены здесь -->
+            </div>
+
+            <div class="quiz-navigation">
+                <button id="partner1PrevBtn" class="btn btn-ghost">← Предыдущий</button>
+                <span id="partner1Progress" class="progress-indicator">1 / 15</span>
+                <button id="partner1NextBtn" class="btn btn-primary">Далее →</button>
+            </div>
+        </div>
+
+        <!-- Экран для второго партнёра -->
+        <div id="partner2Screen" class="partner-screen hidden">
+            <div class="partner-header">
+                <h2>👤 Партнёр 2: <strong id="partner2Name">Человек 2</strong></h2>
+                <p class="partner-instruction">Отвечай честно на вопросы.</p>
+            </div>
+
+            <div id="partner2QuestionContainer" class="question-container">
+                <!-- Вопросы будут добавлены здесь -->
+            </div>
+
+            <div class="quiz-navigation">
+                <button id="partner2PrevBtn" class="btn btn-ghost">← Предыдущий</button>
+                <span id="partner2Progress" class="progress-indicator">1 / 15</span>
+                <button id="partner2NextBtn" class="btn btn-primary">Далее →</button>
+            </div>
+        </div>
+
+        <!-- Экран результатов -->
+        <div id="resultsScreen" class="results-screen hidden">
+            <div class="results-header">
+                <h2>💕 Результаты теста совместимости</h2>
+            </div>
+
+            <div id="resultsContent" class="results-content">
+                <!-- Результаты будут добавлены здесь -->
+            </div>
+
+            <div class="results-actions">
+                <button id="restartCoupleBtn" class="btn btn-primary btn-glow">
+                    ← Начать заново
+                </button>
+                <a href="/" class="btn btn-ghost">На главную</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
