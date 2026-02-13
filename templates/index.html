@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}Love Quiz — Викторина для влюблённых{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-text">
+        <h1 class="hero-title">Конструктор викторин для влюблённых пар</h1>
+        <p class="hero-subtitle">
+            Создавайте свои викторины или используйте готовые. Сначала один партнёр отвечает на вопросы,
+            потом второй — и вы узнаёте, насколько вы совпадаете!
+        </p>
+        <div class="hero-actions">
+            <a href="{{ url_for('quiz') }}" class="btn btn-primary btn-glow">
+                Начать викторину
+            </a>
+            <a href="{{ url_for('gallery') }}" class="btn btn-ghost">
+                Открыть вашу галерею
+            </a>
+        </div>
+        <div class="hero-meta">
+            <div class="meta-item">
+                <span class="meta-label">Конструктор</span>
+                <span class="meta-value">Создавайте свои викторины</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Сравнение ответов</span>
+                <span class="meta-value">Оба партнёра проходят тест</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Для двоих</span>
+                <span class="meta-value">Телефон + планшет + ПК</span>
+            </div>
+        </div>
+    </div>
+    <div class="hero-card">
+        <div class="hero-card-inner">
+            <p class="hero-card-label">Мини‑демо</p>
+            <p class="hero-card-question">
+                Какой идеальный вечер для вас двоих?
+            </p>
+            <ul class="hero-card-options">
+                <li>Фильм под пледом</li>
+                <li>Совместное путешествие</li>
+                <li>Ужин при свечах</li>
+                <li>Настольные игры</li>
+            </ul>
+            <p class="hero-card-note">Оба партнёра отвечают на одни и те же вопросы, затем ответы сравниваются.</p>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <h2 class="section-title">Что вас ждёт внутри</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3>Конструктор викторин</h3>
+            <p>Создавайте свои викторины с любыми вопросами и вариантами ответов. Сохраняйте и проходите их вместе.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Сравнение ответов</h3>
+            <p>Сначала один партнёр проходит тест, затем второй. Система сравнивает ответы и показывает процент совпадений.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Готовые викторины</h3>
+            <p>Используйте готовые тесты: «Насколько хорошо ты знаешь партнёра», «Совместимость» и «Кто вы из фильма».</p>
+        </div>
+        <div class="feature-card">
+            <h3>Ваша галерея</h3>
+            <p>Загрузите ваши общие фото в папку <code>images</code> и наслаждайтесь красивой лентой воспоминаний.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Love Quiz — Галерея воспоминаний{% endblock %}
+
+{% block content %}
+<section class="gallery-wrapper">
+    <header class="gallery-header">
+        <h1>Ваша галерея любви</h1>
+        <p>
+            Все фотографии берутся из папки <code>images</code> в корне проекта.
+            Просто добавьте туда ваши общие снимки — и обновите страницу.
+        </p>
+    </header>
+
+    {% if images %}
+        <div class="gallery-grid">
+            {% for img in images %}
+                <figure class="gallery-item">
+                    <img src="{{ img }}" alt="Ваше фото {{ loop.index }}" loading="lazy" />
+                </figure>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="gallery-empty">
+            <p>Пока что здесь пусто. Добавьте ваши фотографии в папку <code>images</code>, чтобы заполнить галерею.</p>
+        </div>
+    {% endif %}
+</section>
+{% endblock %}
+

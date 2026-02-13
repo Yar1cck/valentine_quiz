@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}Love Quiz — Викторины ко Дню святого Валентина{% endblock %}
+
+{% block content %}
+<section class="valentine-page-wrapper">
+    <header class="valentine-page-header">
+        <h1>Викторины ко Дню святого Валентина</h1>
+        <p>Выберите викторину для прохождения</p>
+    </header>
+
+    <div class="valentine-quizzes-grid">
+        <button class="valentine-quiz-card" data-quiz="movie" data-type="single">
+            <h3>Кто вы из фильма</h3>
+            <p>Романтический тест, который подберёт вам пару персонажей из культовых фильмов</p>
+        </button>
+
+        <!-- Викторины ко Дню святого Валентина -->
+        <button class="valentine-quiz-card" data-quiz="guess-couple" data-type="single">
+            <h3>Угадай пару</h3>
+            <p>Угадайте известные пары по фотографиям и историям любви</p>
+        </button>
+        <button class="valentine-quiz-card" data-quiz="crossword" data-type="single">
+            <h3>Романтический кроссворд</h3>
+            <p>Разгадайте кроссворд с тематическими словами о любви</p>
+        </button>
+        <button class="valentine-quiz-card" data-quiz="movie-quotes" data-type="single">
+            <h3>Кино-валентинка</h3>
+            <p>Отгадайте фильмы по цитатам и сценам</p>
+        </button>
+        <button class="valentine-quiz-card" data-quiz="riddles" data-type="single">
+            <h3>Сердечные загадки</h3>
+            <p>Загадки про атрибуты Дня святого Валентина</p>
+        </button>
+        <button class="valentine-quiz-card" data-quiz="love-history" data-type="single">
+            <h3>История любви</h3>
+            <p>Викторина на знание историй знаменитых влюблённых</p>
+        </button>
+        <button class="valentine-quiz-card" data-quiz="valentine-test" data-type="single">
+            <h3>Валентинов тест</h3>
+            <p>Вопросы о традициях празднования в разных странах</p>
+        </button>
+        <button class="valentine-quiz-card" data-quiz="music" data-type="single">
+            <h3>Музыкальный романс</h3>
+            <p>Угадайте романтические песни по отрывкам</p>
+        </button>
+        <button class="valentine-quiz-card" data-quiz="culinary" data-type="single">
+            <h3>Кулинарный вызов</h3>
+            <p>Вопросы о десертах и блюдах ко Дню святого Валентина</p>
+        </button>
+        <button class="valentine-quiz-card" data-quiz="literature" data-type="single">
+            <h3>Литературная любовь</h3>
+            <p>Викторина по романам и стихотворениям о любви</p>
+        </button>
+        <button class="valentine-quiz-card" data-quiz="symbols" data-type="single">
+            <h3>Символы любви</h3>
+            <p>Угадайте значения символов Дня святого Валентина</p>
+        </button>
+    </div>
+
+    <!-- Контейнер для активной викторины -->
+    <div id="activeValentineQuiz" class="active-valentine-quiz hidden"></div>
+</section>
+{% endblock %}
